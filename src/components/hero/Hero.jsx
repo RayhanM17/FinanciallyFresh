@@ -60,8 +60,8 @@ const Hero = () => {
       </Canvas>
       <div className={Styles.absolutecenter}>
         <div className={Styles.container}>
-          <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-          <h3 className='pt-20 pb-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sed.</h3>
+          <h1>Achieve financial Freedom</h1>
+          <h3 className='pt-20 pb-20'>Explore through our website and learn how to manage your finances</h3>
           <Button isAlt href='#' icon="ARROW_RIGHT">
             Read mores
           </Button>

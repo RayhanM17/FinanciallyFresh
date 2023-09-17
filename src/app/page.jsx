@@ -27,7 +27,7 @@ const Home = async () => {
     return (
       <div className="container pb-80">
         <div className="row pt-80 pb-80">
-          <h3>Lorem ipsum dolor sit amet</h3>
+          <h3>Read our tailered articles</h3>
         </div>
         <div className="row">
           {blogs.data.map(blog => (

@@ -1,5 +1,5 @@
 "use client"
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import Button from '../button/Button';
@@ -55,11 +55,17 @@ const Hero = () => {
   const {height, width} = useWindowDimensions()
 
   const amplitude = 1.0;      // Amplitude of the sine wave
-  const frequency = 4.0;     // Frequency of the sine wave (number of cycles within 2*pi)
+  const [frequency, setFrequency] = useState(4.0);     // Frequency of the sine wave (number of cycles within 2*pi)
   const numPoints = 1000;   // Number of points to generate
 
+  const handleMouseMove = (event) => {
+    // Example: Adjust frequency based on mouse X position
+    const newFrequency = event.clientX / width * 2; // Adjust the multiplier as needed
+    setFrequency(newFrequency);
+  };
+
   return (
-    <div className={Styles.fullscreen}>
+    <div className={Styles.fullscreen} onMouseMove={handleMouseMove}>
       <Canvas camera={{position: [0, 0, amplitude*1.35], fov: 75}}>
         <Suspense fallback={null}>
           <WaveDots amplitude={amplitude} frequency={frequency} numPoints={numPoints}/>

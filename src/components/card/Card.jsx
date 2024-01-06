@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Button from '../button/Button'
-import ConditionalRenderer from '../ConditionalRenderer'
+import ConditionalRenderer from '../../hooks/ConditionalRenderer'
 import styles from './card.module.sass'
 
 const Card = (props) => {

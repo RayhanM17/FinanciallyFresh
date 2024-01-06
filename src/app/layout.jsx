@@ -1,5 +1,4 @@
 import { Prompt, Martel_Sans, Neuton} from 'next/font/google'
-import Showcase from '@/components/showcase/Showcase'
 
 import '@/styles/styles.sass'
 
@@ -29,7 +28,6 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <body className={`${neuton.className} ${neuton.variable} ${martelSans.variable} ${prompt.variable}`}>
-      <Showcase />
       {children}
     </body>
   </html>

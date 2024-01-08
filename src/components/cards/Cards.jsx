@@ -1,11 +1,31 @@
 import Card from "../card/Card";
 import { IconTypes } from '../button/Button';
 import getBlogs from "@/hooks/getBlogs";
+import config from "@/config";
 
 const Cards = async () => {
   try {
     const blogs = await getBlogs();
     console.log("blogs", blogs.data);
+    // const blogs = [
+    //   {
+    //     id: '',
+    //     attributes: {
+    //       Category: '',
+    //       Title: '',
+    //       Summary: '',
+    //       Slug: '',
+
+    //     },
+    //     imgSrc: '',
+    //     imgAlt: '',
+    //     title: '',
+    //     card_summary: '',
+    //     href: '',
+    //     btnIcon: '',
+    //     btnLabel: ''
+    //   },
+    // ]
 
     return (
       <div className="container pb-80">

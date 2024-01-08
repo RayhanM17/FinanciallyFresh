@@ -5,7 +5,7 @@ import Styles from './showcase.module.sass'
 
 const Showcase = () => {
   return (
-    <div className={Styles.gradient}>
+    <div className='gradient'>
       <Header />
       <Hero />
     </div>

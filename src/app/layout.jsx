@@ -1,4 +1,5 @@
 import { Prompt, Martel_Sans, Neuton} from 'next/font/google'
+import Footer from '@/components/Footer/Footer'
 
 import '@/styles/styles.sass'
 
@@ -29,6 +30,7 @@ const RootLayout = ({ children }) => (
   <html lang="en">
     <body className={`${neuton.className} ${neuton.variable} ${martelSans.variable} ${prompt.variable}`}>
       {children}
+      <Footer/>
     </body>
   </html>
 )

@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Button from '../button/Button'
 import ConditionalRenderer from '../../hooks/ConditionalRenderer'
 import styles from './card.module.sass'
+import getCategoryColor from '../../hooks/getCategoryColor'
 
-const Card = (props) => {
-  return (
+const Card = (props) => (
     <div className={`${styles.card_wrap} ${props.className || ''}`}>
         <div className={styles.card}>
             <div className={styles.card_imageWrap}>
@@ -15,7 +15,10 @@ const Card = (props) => {
             </div>
             <div className={styles.card_content}>
                 <ConditionalRenderer condition={props.title}>
-                    <div className={`${styles.card_title} h3 mb-20`}>{props.title}</div>
+                    <p className={`${styles.card_label} mb-10 c-${getCategoryColor(props.label)}`}>{props.label}</p>
+                </ConditionalRenderer>
+                <ConditionalRenderer condition={props.title}>
+                    <h3 className={`${styles.card_title} h3 mb-20`}>{props.title}</h3>
                 </ConditionalRenderer>
                 <ConditionalRenderer condition={props.summary}>
                     <p className={`${styles.card_summary} pb-20`}>{props.summary}</p>
@@ -28,7 +31,6 @@ const Card = (props) => {
             </div>
         </div>
     </div>
-  )
-}
+)
 
 export default Card
